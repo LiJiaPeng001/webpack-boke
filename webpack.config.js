@@ -86,7 +86,7 @@ var webpackConfig = {
     resolve : {
         alias : {
             node_modules    : path.resolve(__dirname, './node_modules'),
-            util            : path.resolve(__dirname, './src/uril'),
+            util            : path.resolve(__dirname, './src/util'),
             page            : path.resolve(__dirname, './src/page'),
             service         : path.resolve(__dirname, './src/service'),
             image           : path.resolve(__dirname, './src/image'),
@@ -109,6 +109,11 @@ var webpackConfig = {
     ],
     devServer: {
         port: '8181',
+        proxy : [{
+            context: ["/api"],
+            target: "http://localhost:8801",
+            changeOrigin : true
+        }]
     }
 }
 
