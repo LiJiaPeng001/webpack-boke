@@ -1,0 +1,21 @@
+.mine-item{
+    background: rgba(255,255,255,0.5);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.mine-item h2{
+    color: #333;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 20px;
+    background: #fff;
+}
+.mine-item ul{
+    padding: 10px;
+    overflow: hidden;
+}
+.about_me img { width: 100% }
+.about_me p { line-height: 24px; font-size: 14px }
+.about_me i { width: 120px; float: left; clear: left; margin-right: 10px; height: 90px; overflow: hidden }
+
+.guanzhu img { width: 100% }

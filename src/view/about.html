@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <%= require('html-loader!./common/head-common.html')  %>
+    <title><%= htmlWebpackPlugin.options.title %> - web前端菜鸟李小朋</title>
+</head>
+<body>
+    <%= require('html-loader!./common/header.html')  %>
+<article>
+  <aside>
+  <div class="l_box">
+    <%= require('html-loader!./common/mine.html')  %>
+    <%= require('html-loader!./common/ali.html')  %>
+  </div>
+  </aside>
+  <div class="r_box">
+<main>
+     <ul class="about"><h1>买菜的家朋</h1></ul>
+</main>
+  </div>
+</article>
+<%= require('html-loader!./common/footer.html')  %>
+<a href="#" class="cd-top">Top</a>
+</body>
+</html>

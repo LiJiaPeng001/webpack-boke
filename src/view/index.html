@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <%= require('html-loader!./common/head-common.html')  %>
+    <title><%= htmlWebpackPlugin.options.title %> - web前端菜鸟李小朋</title>
+</head>
+<body>
+    <%= require('html-loader!./common/header.html')  %>
+<article>
+  <aside>
+    <div class="l_box" id="stickMe">
+      <%= require('html-loader!./common/mine.html')  %>
+      <%= require('html-loader!./common/search.html')  %>
+      <%= require('html-loader!./common/class.html')  %>
+      <%= require('html-loader!./common/recommon.html')  %>      
+      <%= require('html-loader!./common/link.html')  %>      
+      <%= require('html-loader!./common/ali.html')  %>         
+  </aside>
+  <div class="r_box">
+<main>
+    <li><i><a href="/"><img src="../image/8.jpg"></a></i>
+      <h3><a href="/">你是什么人便会遇上什么人</a></h3>
+      <p>有时就为了一句狠话，像心头一口毒钉，永远麻痺着亲密感情交流。恶言，真要慎出，平日多誠心爱语，乃最简易之佈施。</p>
+    </li>
+    <li><i><a href="/"><img src="../image/8.jpg"></a></i>
+      <h3><a href="/">爱情没有永远，地老天荒也走不完</a></h3>
+      <p>也许，爱情没有永远，地老天荒也走不完，生命终结的末端，苦短情长。站在岁月的边端，那些美丽的定格，心伤的绝恋，都被四季的掩埋，一去不返。徒剩下这荒芜的花好月圆，一路相随，流离天涯背负了谁的思念？</p>
+    </li>
+    <li><i><a href="/"><img src="../image/8.jpg"></a></i>
+      <h3><a href="/">女孩都有浪漫的小情怀——浪漫的求婚词</a></h3>
+      <p>还在为浪漫的求婚词而烦恼不知道该怎么说吗？女孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
+    </li>
+</main>
+  </div>
+</article>
+<%= require('html-loader!./common/footer.html')  %>
+<a href="#" class="cd-top">Top</a>
+</body>
+</html>
