@@ -12,7 +12,7 @@ let _index = require('service/index-service.js')
 var index = {
     init : function(){
         
-    }
+    },
 };
 
 module.exports = index.init();

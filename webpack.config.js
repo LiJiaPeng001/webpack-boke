@@ -29,7 +29,8 @@ var webpackConfig = {
     },
     output: {
         path        : __dirname + '/dist/',
-        publicPath  : '/dist/',
+        // publicPath  : '/dist/',
+        publicPath  : 'http://mcljp.com/dist/',
         filename    : 'js/[name].js'
     },
     module: {
@@ -110,8 +111,8 @@ var webpackConfig = {
     devServer: {
         port: '8181',
         proxy : [{
-            context: ["/api"],
-            target: "http://localhost:8801",
+            context: ['/admin'],
+            target: "http://mcljp.com",
             changeOrigin : true
         }]
     }

@@ -9,3 +9,17 @@
 .navicon:before, .navicon:after { content: ''; display: block; width: 30px; height: 5px; position: absolute; background: #000; -webkit-transition-property: margin, -webkit-transform; transition-property: margin, -webkit-transform; transition-property: margin, transform; transition-property: margin, transform, -webkit-transform; -webkit-transition-duration: 300ms; transition-duration: 300ms; }
 .navicon:before { margin-top: -10px; }
 .navicon:after { margin-top: 10px; }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #mnavh{ position:absolute;display:block; top:8px; right:10px}
+    #starlist{ display:none; background: rgba(255,255,255,1);width:50%;}
+    #starlist li{ display:block; width:50%; padding:0}
+    }
+    @media only screen and (max-width: 479px) {
+    #starlist{ display:none; background: rgba(255,255,255,1);width:50%;}
+    #starlist li{ display:block; width:50%; padding:0}
+    #mnavh{ position:absolute;display:block; top:8px; right:10px}
+    }
+.open .navicon { background: none }
+.open .navicon:before { margin-top: 0; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.open .navicon:after { margin-top: 0; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+.open .navicon:before, .open .navicon:after { content: ''; display: block; width: 30px; height: 5px; position: absolute; background: #000; }

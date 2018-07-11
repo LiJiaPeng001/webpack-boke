@@ -1,6 +1,9 @@
 
 'use strict';
 var Hogan = require('hogan.js');
+var conf = {
+    serverHost : ''
+};
 var _mm = {
     // 网络请求
     request : function(param){
@@ -30,6 +33,10 @@ var _mm = {
                 typeof param.error === 'function' && param.error(err.statusText ||  err.msg);
             }
         });
+    },
+    // 获取服务器地址
+    getServerUrl : function(path){
+        return conf.serverHost + path;
     },
     // 本地存储
     setStorage(name, data){

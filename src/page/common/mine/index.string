@@ -1,0 +1,9 @@
+<div>
+    {{#res}}
+    <h2>关于我</h2>
+    <ul>
+      <i><img src="{{pic}}"></i>
+      <p><b>{{title}}</b>，{{subtitle}}。</p>
+    </ul>
+    {{/res}}
+</div>

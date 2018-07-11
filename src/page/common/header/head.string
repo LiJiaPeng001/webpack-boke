@@ -1,0 +1,5 @@
+<div>
+    {{#res}}
+    <li><a href="{{link}}">{{label}}</a></li>
+    {{/res}}
+</div>
