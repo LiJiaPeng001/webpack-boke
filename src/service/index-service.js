@@ -11,6 +11,7 @@ var _index = {
             error   : reject
         });
     },
+    //获取我的个人信息
     getMine : function (resolve,reject){
         _mm.request({
             url     : _mm.getServerUrl('/admin/user'),
