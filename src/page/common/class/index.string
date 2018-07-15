@@ -1,0 +1,5 @@
+<ul>
+{{#res}}
+    <li><a href="info.html?categoryId={{category.status}}" target='_blank'>{{category.msg}}</a></li>
+{{/res}}
+</ul>

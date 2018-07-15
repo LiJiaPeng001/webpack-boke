@@ -1,0 +1,8 @@
+<ul>
+{{#res}}
+    <li><i><a href="info.html?aid={{aid}}"><img src="{{art_pic}}"></a></i>
+      <h3><a href="info.html?aid={{aid}}" target='_blank'>{{title}}</a></h3>
+      <p>{{subtitle}}</p>
+    </li>
+    {{/res}}
+</ul>

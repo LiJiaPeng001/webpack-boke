@@ -1,0 +1,5 @@
+    <ul>
+    {{#res}}
+      <li><a href="info.html?aid={{aid}}">{{title}}</a></li>
+      {{/res}}
+    </ul>

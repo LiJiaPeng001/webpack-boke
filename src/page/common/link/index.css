@@ -1,1 +1,11 @@
-.links a { display: block; float: left; margin: 0 10px 5px 0 }
+.links a { 
+    display: block; 
+    margin: 0 10px 5px 0;    
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.links li{
+    background: url(../../../image/li.png) no-repeat left center;
+    padding-left: 20px;
+}

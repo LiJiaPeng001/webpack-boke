@@ -7,6 +7,7 @@ var _index = {
     getLabel : function (resolve,reject){
         _mm.request({
             url     : _mm.getServerUrl('/admin/label'),
+            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -15,6 +16,7 @@ var _index = {
     getMine : function (resolve,reject){
         _mm.request({
             url     : _mm.getServerUrl('/admin/user'),
+            method  : 'POST',
             success : resolve,
             error   : reject
         });
