@@ -1,0 +1,15 @@
+<div>
+{{#res}}
+<h3 class="news_title">{{title}}</h3>
+      <div class="bloginfo">
+        <ul>
+          <li class="author">作者：<a href="/">李小朋</a></li>
+          <li class="lmname"><a href="/">学无止境</a></li>
+          <li class="timer">时间：{{create_time}}</li>
+        </ul>
+      </div>
+      <div class="tags"><a href="info.html?categoryId={{category.status}}" target="_blank">{{category.msg}}</a></div>
+      <div class="news_about"><strong>简介</strong>{{subtitle}}</div>
+      <div class="news_con">{{detail}}</div>
+      {{/res}}
+    </div>

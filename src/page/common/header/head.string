@@ -1,5 +1,5 @@
 <div>
     {{#res}}
-    <li><a href="{{link}}">{{label}}</a></li>
+    <li><a href="{{link}}" target='_blank'>{{label}}</a></li>
     {{/res}}
 </div>

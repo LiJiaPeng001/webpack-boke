@@ -36,5 +36,14 @@ var _index = {
             error   : reject
         });
     },
+    //通过aid获取置顶博客所有内容
+    getArticleItem : function (data,resolve,reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/admin/getArticleItem'),
+            data    : data,
+            success : resolve,
+            error   : reject
+        });
+    },
 }
 module.exports = _index;
