@@ -29,8 +29,8 @@ var webpackConfig = {
     },
     output: {
         path        : __dirname + '/dist/',
-        // publicPath  : '/dist/',
-        publicPath  : 'http://mcljp.com/dist/',
+        publicPath  : '/dist/',
+        // publicPath  : 'http://mcljp.com/dist/',
         filename    : 'js/[name].js'
     },
     module: {

@@ -1,28 +1,33 @@
 <!doctype html>
 <html>
+
 <head>
-    <%= require('html-loader!./common/head-common.html')  %>
-    <title><%= htmlWebpackPlugin.options.title %> - web前端菜鸟李小朋</title>
+        <%= require('html-loader!./common/head-common.html')  %>
+        <title>
+        <%= htmlWebpackPlugin.options.title %> - web前端菜鸟李小朋</title>
 </head>
+
 <body>
     <%= require('html-loader!./common/header.html')  %>
-<article>
-  <aside>
-    <div class="l_box" id="stickMe">
-      <%= require('html-loader!./common/mine.html')  %>
-      <%= require('html-loader!./common/search.html')  %>
-      <%= require('html-loader!./common/class.html')  %>
-      <%= require('html-loader!./common/recommon.html')  %>      
-      <%= require('html-loader!./common/link.html')  %>      
-      <%= require('html-loader!./common/ali.html')  %>         
-  </aside>
-  <div class="r_box">
-<main class="main_index">
-    <div class="loading"></div>
-</main>
-  </div>
-</article>
-<%= require('html-loader!./common/footer.html')  %>
-<a href="#" class="cd-top">Top</a>
+        <article>
+            <aside>
+                <div class="l_box" id="stickMe">
+                    <%= require('html-loader!./common/mine.html')  %>
+                    <%= require('html-loader!./common/search.html')  %>
+                    <%= require('html-loader!./common/class.html')  %>
+                    <%= require('html-loader!./common/recommon.html')  %>
+                    <%= require('html-loader!./common/link.html')  %>
+                    <%= require('html-loader!./common/ali.html')  %>
+            </aside>
+            <div class="r_box">
+                <main class="main_index">
+                    <div class="loading"></div>
+                </main>
+                <div id="pagination"></div>
+            </div>
+        </article>
+        <%= require('html-loader!./common/footer.html')  %>
+            <a href="#" class="cd-top">Top</a>
 </body>
+
 </html>

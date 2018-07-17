@@ -9,10 +9,17 @@ var mine = {
     init : function(){
         this.getRecommonArticle();  
     },
+    data : {
+        option : {
+            pageNum  : 1,
+            pageSize : 5,
+            recommon : '123'
+        }
+    },
     //获取最新博客
     getRecommonArticle : function(){
-        _info.getArticleRecommon(function(res){
-            var recommon = _mm.renderHtml(templateIndex,{res:res});
+        _info.getQueryArticle(this.data.option,function(res){
+            var recommon = _mm.renderHtml(templateIndex,{res:res.list});
             $('.recommon').html(recommon);
         },function(err){
 

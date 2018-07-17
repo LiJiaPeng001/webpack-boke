@@ -1,17 +1,18 @@
 <div aria-label="Page navigation">
-  <ul class="pagination">
+  <ul class='pagination'>
   {{#pageArray}}
-  {{#disabled}}
-    <li class='disabled'><span data-value={{value}}>{{name}}</span></li>
+    {{#disabled}}
+    <li class='disabled pg-item'  data-value={{value}}><span>{{name}}</span></li>
     {{/disabled}}
     {{^disabled}}
     {{#active}}
-        <li class='active'><span data-value={{value}}>{{name}}</span></li>
+        <li class='active pg-item'  data-value={{value}}><span>{{name}}</span></li>
     {{/active}}
-    {{#active}}
-        <li><span data-value={{value}}>{{name}}</span></li>
+    {{^active}}
+        <li class='pg-item'  data-value={{value}}><span>{{name}}</span></li>
     {{/active}}
     {{/disabled}}
   {{/pageArray}}
+  <span class="pg-total">{{pageNum}} / {{pages}}</span>
   </ul>
-</div>
+  </div>

@@ -1,5 +1,5 @@
 <ul>
 {{#res}}
-    <li><a href="info.html?categoryId={{category.status}}" target='_blank'>{{category.msg}}</a></li>
+    <li><a href="info.html?categoryId={{categoryId}}" target='_blank'>{{item}}</a></li>
 {{/res}}
 </ul>

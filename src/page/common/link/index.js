@@ -9,9 +9,16 @@ var mine = {
     init : function(){
         this.getArticleNew();
     },
+    data : {
+        option : {
+            pageNum  : 1,
+            pageSize : 5,
+            new      : '123'
+        }
+    },
     getArticleNew : function(){
-        _info.getArticleNew(function(res){
-            var link = _mm.renderHtml(templateIndex,{res:res});
+        _info.getQueryArticle(this.data.option,function(res){
+            var link = _mm.renderHtml(templateIndex,{res:res.list});
             $('.link-new').html(link);
         },function(err){
 

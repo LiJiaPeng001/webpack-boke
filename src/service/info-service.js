@@ -4,10 +4,10 @@ var _mm = require('util/mm.js');
 
 var _index = {
     //获取所有文章
-    getQueryArticle : function (resolve,reject){
+    getQueryArticle : function (data,resolve,reject){
         _mm.request({
             url     : _mm.getServerUrl('/admin/getQueryArticle'),
-            method  : 'POST',
+            data    : data,
             success : resolve,
             error   : reject
         });
