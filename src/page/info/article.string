@@ -8,7 +8,7 @@
           <li class="timer">时间：{{create_time}}</li>
         </ul>
       </div>
-      <div class="tags"><a href="info.html?categoryId={{category.status}}" target="_blank">{{category.msg}}</a></div>
+      <div class="tags"><a href="info.html?categoryId={{category.categoryId}}" target="_blank">{{category.item}}</a></div>
       <div class="news_about"><strong>简介</strong>{{subtitle}}</div>
       <div class="news_con">{{detail}}</div>
       {{/res}}

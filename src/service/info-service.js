@@ -7,6 +7,7 @@ var _index = {
     getQueryArticle : function (data,resolve,reject){
         _mm.request({
             url     : _mm.getServerUrl('/admin/getQueryArticle'),
+            method  : 'POST',
             data    : data,
             success : resolve,
             error   : reject
@@ -16,6 +17,7 @@ var _index = {
     getArticleClass : function (resolve,reject){
         _mm.request({
             url     : _mm.getServerUrl('/admin/getArticleClass'),
+            method  : 'POST',
             success : resolve,
             error   : reject
         });
