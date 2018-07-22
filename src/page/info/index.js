@@ -49,36 +49,44 @@ var info = {
     getArticleItem : function(data){
         var _this = this;
         _info.getQueryArticle(data,function(res){
-            if(data.aid){
-                var aid = _mm.renderHtml(templateArticle,{res:res.list});
-                $('.newsview').html(aid);
-            }else if(data.like){
-                var cate = _mm.renderHtml(templateClass,{res:res.list});
-                $('.newsview').html(cate);
-                _this.loadPages({
-                    hasPreviousPage : res.hasPreviousPage,
-                    prePage         : res.prePage,
-                    hasNextPage     : res.hasNextPage,
-                    nextPage        : res.nextPage,
-                    pageNum         : res.pageNum,
-                    pages           : res.pages,
-                    container       : $('#pagination')
-                })
+            if(res.list.length>0){
+                if(data.aid){
+                    var aid = _mm.renderHtml(templateArticle,{res:res.list});
+                    $('.newsview').html(aid);
+                }else if(data.like){
+                    if(res.list.length>0){
+                        var cate = _mm.renderHtml(templateClass,{res:res.list});
+                        $('.newsview').html(cate);
+                        _this.loadPages({
+                            hasPreviousPage : res.hasPreviousPage,
+                            prePage         : res.prePage,
+                            hasNextPage     : res.hasNextPage,
+                            nextPage        : res.nextPage,
+                            pageNum         : res.pageNum,
+                            pages           : res.pages,
+                            container       : $('#pagination')
+                        })
+                    }              
+                }else{
+                    var cate = _mm.renderHtml(templateClass,{res:res.list});
+                    $('.newsview').html(cate);
+                    _this.loadPages({
+                        hasPreviousPage : res.hasPreviousPage,
+                        prePage         : res.prePage,
+                        hasNextPage     : res.hasNextPage,
+                        nextPage        : res.nextPage,
+                        pageNum         : res.pageNum,
+                        pages           : res.pages,
+                        container       : $('#pagination')
+                    })
+                }
             }else{
-                var cate = _mm.renderHtml(templateClass,{res:res.list});
-                $('.newsview').html(cate);
-                _this.loadPages({
-                    hasPreviousPage : res.hasPreviousPage,
-                    prePage         : res.prePage,
-                    hasNextPage     : res.hasNextPage,
-                    nextPage        : res.nextPage,
-                    pageNum         : res.pageNum,
-                    pages           : res.pages,
-                    container       : $('#pagination')
-                })
-            }
+                $('.newsview').html(`
+                    <div class='center-bloc no-search'>当前东西空空喔，<a href='index.html'>点击返回首页</a></div>
+                `);
+            }            
         },function(err){
-
+            
         })
     },
     //获取分页

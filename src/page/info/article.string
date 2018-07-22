@@ -10,6 +10,6 @@
       </div>
       <div class="tags"><a href="info.html?categoryId={{category.categoryId}}" target="_blank">{{category.item}}</a></div>
       <div class="news_about"><strong>简介</strong>{{subtitle}}</div>
-      <div class="news_con">{{detail}}</div>
+      <div class="news_con">{{{detail}}}</div>
       {{/res}}
     </div>
