@@ -1,6 +1,6 @@
 /* css */
 * { margin: 0; padding: 0 }
-body { font: 15px "Microsoft YaHei", Arial, Helvetica, sans-serif; color: #555; background: #efefef; line-height: 1.5; }
+body { font: 1rem "Microsoft YaHei", Arial, Helvetica, sans-serif; color: #555; background: #efefef; line-height: 1.5; }
 img { border: 0; display: block }
 ul, li { list-style: none; }
 a { text-decoration: none; color: #555 }
@@ -35,7 +35,7 @@ article, aside { display: block; position: relative; }
 .r_box .r_li:hover h3 a { color: #19585d; }
 .l_box { width: 30%; float: right }
 .r_box { width: 68%; float: left }
-.fa{margin-right: 5px;}
+.fa{margin-right: 0.5rem;}
 .loading{
     background: url('../../image/loading.gif') no-repeat 30% center;
     width:100px;
@@ -80,6 +80,7 @@ article, aside { display: block; position: relative; }
     .lmname,.view{ display:none}
     }
     @media only screen and (max-width: 479px) {
+        .boke .author,.boke .timer{display: none;}
     header{ width:96%; margin:auto}
     article{ width:100%}
     .logo{ width:100%}
@@ -98,8 +99,8 @@ article, aside { display: block; position: relative; }
     .picshowlist,.pictxt{ display:none}
     .lmname,.view{ display:none}
     .r_box li i{ float:none; margin:0 auto 20px; width:100%; max-height:150px}
+    .r_box .r_li h3 { font-size: 16px; line-height: 20px; text-shadow: #FFF 1px 1px 1px; font-weight: 500;}
     }
 .no-search a{
     color:#f65a8a;
 }
-    

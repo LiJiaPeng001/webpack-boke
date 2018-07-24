@@ -6,10 +6,10 @@
         <ul>
           <li class="author"><i class="fa fa-user-circle"></i>李小朋</li>
           <li class="timer">时间：{{create_time}}</li>
-          <li class="timer">阅读量：{{readCount}}</li>
+          <li class="read">阅读量：{{readCount}}</li>
         </ul>
       </div>
-      <p>{{subtitle}}</p>
+      <p>简介：{{subtitle}}</p>
     </li>
     {{/res}}
 </ul>
