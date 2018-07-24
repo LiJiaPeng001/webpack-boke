@@ -47,5 +47,14 @@ var _index = {
             error   : reject
         });
     },
+    //增加阅读量
+    onAddReadCount : function (data,resolve,reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/admin/addReadCount'),
+            data    : data,
+            success : resolve,
+            error   : reject
+        });
+    },
 }
 module.exports = _index;

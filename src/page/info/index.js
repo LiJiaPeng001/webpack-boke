@@ -12,7 +12,7 @@ let _index              = require('service/index-service.js');
 let _info               = require('service/info-service.js');
 let templateArticle     = require('./article.string');
 let _mm                 = require('util/mm.js');
-let templateClass       = require('../index/article.string');
+let templateClass       = require('./list.string');
 let Pagination          = require('util/pagination/index.js');
 
 var info = {
@@ -29,12 +29,20 @@ var info = {
             pageSize : 6
         }
     },
+    onAddReadCount : function(id){
+        _info.onAddReadCount({aid : id},function(res){
+
+        },function(err){
+            
+        })
+    },
     //获取导航栏参数
     getParams:function(){
         if(_mm.getUrlParam('aid')){
             this.data.aid = _mm.getUrlParam('aid');
             //如果有aid获取文章参数
             this.getArticleItem($.extend({},this.data.option,{'aid':this.data.aid}));
+            this.onAddReadCount(this.data.aid);
         }else if(_mm.getUrlParam('categoryId')){
             //如果是分类，获取该分类下的所有内容
             this.data.categoryId = _mm.getUrlParam('categoryId');
@@ -51,11 +59,11 @@ var info = {
         _info.getQueryArticle(data,function(res){
             if(res.list.length>0){
                 if(data.aid){
-                    var aid = _mm.renderHtml(templateArticle,{res:res.list});
+                    var aid = _mm.renderHtml(templateArticle,{res:res.list,next:res.next,prev:res.prev});
                     $('.newsview').html(aid);
                 }else if(data.like){
                     if(res.list.length>0){
-                        var cate = _mm.renderHtml(templateClass,{res:res.list});
+                        var cate = _mm.renderHtml(templateClass,{res:res.list,like:data.like});
                         $('.newsview').html(cate);
                         _this.loadPages({
                             hasPreviousPage : res.hasPreviousPage,
@@ -68,7 +76,7 @@ var info = {
                         })
                     }              
                 }else{
-                    var cate = _mm.renderHtml(templateClass,{res:res.list});
+                    var cate = _mm.renderHtml(templateClass,{res:res.list,cate:res.list[0].category});
                     $('.newsview').html(cate);
                     _this.loadPages({
                         hasPreviousPage : res.hasPreviousPage,
@@ -82,7 +90,7 @@ var info = {
                 }
             }else{
                 $('.newsview').html(`
-                    <div class='center-bloc no-search'>当前东西空空喔，<a href='index.html'>点击返回首页</a></div>
+                    <div class='center-block no-search'>当前东西空空喔，<a href='index.html'>点击返回首页</a></div>
                 `);
             }            
         },function(err){

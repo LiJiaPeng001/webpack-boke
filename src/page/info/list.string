@@ -1,4 +1,9 @@
 <ul>
+
+<h2 class="intitle">您现在的位置是：
+              <a href="index.html">首页</a>&nbsp;&gt;&nbsp;
+              <a href="info.html?categoryId={{cate.categoryId}}" target="_blank">{{cate.item}}</a>
+            </h2>
 {{#res}}
     <li class='r_li'><i class='img'><a href="info.html?aid={{aid}}"><img src="{{art_pic}}"></a></i>
       <h3><a href="info.html?aid={{aid}}" target='_blank'>{{title}}</a></h3>

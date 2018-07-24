@@ -1,15 +1,30 @@
 <div>
 {{#res}}
+<h2 class="intitle">您现在的位置是：
+              <a href="index.html">首页</a>&nbsp;&gt;&nbsp;
+              <a href="info.html?categoryId={{category.categoryId}}" target="_blank">{{category.item}}</a>&nbsp;&gt;&nbsp;
+              <a href="javascript:;">文章详情</a>
+            </h2>
 <h3 class="news_title">{{title}}</h3>
       <div class="bloginfo">
         <ul>
-          <li class="author">作者：<a href="/">李小朋</a></li>
+          <li class="author"><i class="fa fa-user-circle"><a href="/">李小朋</a></li>
           <li class="lmname"><a href="/">学无止境</a></li>
           <li class="timer">时间：{{create_time}}</li>
+          <li class="timer">阅读量：{{readCount}}</li>
         </ul>
       </div>
       <div class="tags"><a href="info.html?categoryId={{category.categoryId}}" target="_blank">{{category.item}}</a></div>
       <div class="news_about"><strong>简介</strong>{{subtitle}}</div>
       <div class="news_con">{{{detail}}}</div>
       {{/res}}
+      
+      <div class="nextinfo">
+                  {{#prev}}
+            <p id="nextnews">上一篇：<a href="info.html?aid={{prev.aid}}" target="_blank">{{prev.title}}</a></p>
+            {{/prev}}
+      {{#next}}
+            <p id="prevnews">下一篇：<a href="info.html?aid={{next.aid}}" target="_blank">{{next.title}}</a></p>
+            {{/next}}
+     </div>
     </div>

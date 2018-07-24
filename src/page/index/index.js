@@ -30,6 +30,7 @@ var index = {
     getQueryArticle : function(){
         var _this = this;
         _info.getQueryArticle(this.data.option,function(res){
+            if(res.list.length>0){
             var article = _mm.renderHtml(templateArticle,{res:res.list});
             $(".main_index").html(article);
             _this.loadPages({
@@ -41,6 +42,11 @@ var index = {
                 pages           : res.pages,
                 container       : $('#pagination')
             })
+        }else{
+            $('.main_index').html(`
+                    <div class='center-block no-search'>博主至今还没写博客呢，<a href='index.html'>点击返回首页</a></div>
+                `);
+        }
         },function(err){
             
         })

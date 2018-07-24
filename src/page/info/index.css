@@ -14,8 +14,7 @@
 .tags { margin: 10px 0; }
 .infosbox img { max-width: 650px; height: auto; width:100% }
 .share { padding: 20px; }
-.nextinfo { line-height: 24px; width: 100%; overflow: hidden; margin: 20px 0 }/*��һƪ��һƪ*/
-.nextinfo p { padding: 4px 10px; border-radius: 5px; }
+.nextinfo { line-height: 24px; width: 100%; overflow: hidden; margin: 20px 0 }
 .nextinfo a:hover { color: #000; text-decoration: underline }
 /*啦啦啦啦*/
 .news_pl { margin: 10px 0; width: 100%;  overflow: hidden;  }
@@ -29,4 +28,8 @@
 }
 #pagination{
     padding: 0 30px;
+}
+#prevnews a{
+    color:#888888;
+    font-size: 14px;
 }
