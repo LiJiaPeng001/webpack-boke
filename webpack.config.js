@@ -1,7 +1,6 @@
 
 const path                  = require('path');
 const webpack               = require('webpack')
-const uglify                = require('uglifyjs-webpack-plugin');
 const htmlPlugin            = require('html-webpack-plugin');
 const extractTextPlugin     = require("extract-text-webpack-plugin");
 
@@ -94,8 +93,6 @@ var webpackConfig = {
         }
     },
     plugins: [
-        //压缩js
-        new uglify(),
         // 独立通用模块到js/base.js
         new webpack.optimize.CommonsChunkPlugin({
             name : 'common',
