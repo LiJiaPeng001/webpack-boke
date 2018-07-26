@@ -28,8 +28,8 @@ var webpackConfig = {
     },
     output: {
         path        : __dirname + '/dist/',
-        // publicPath  : '/dist/',
-        publicPath  : 'http://mcljp.com/dist/',
+        publicPath  : WEBPACK_ENV == 'env'?'/dist/':'http://mcljp.com/dist/',
+        // publicPath  : 'http://mcljp.com/dist/',
         filename    : 'js/[name].js'
     },
     module: {

@@ -21,7 +21,7 @@ var header = {
             var head = _mm.renderHtml(templateHead,{res:res});
             $('#starlist').html(head);
         },function(err){
-            _mm.error(err);
+            _mm.errorTips(err);
         })
     },
     //移动端操作
