@@ -28,7 +28,7 @@ var webpackConfig = {
     },
     output: {
         path        : __dirname + '/dist/',
-        publicPath  : WEBPACK_ENV == 'env'?'/dist/':'http://mcljp.com/dist/',
+        publicPath  : WEBPACK_ENV === 'env'?'/dist/':'http://mcljp.com/dist/',
         // publicPath  : 'http://mcljp.com/dist/',
         filename    : 'js/[name].js'
     },
@@ -106,6 +106,7 @@ var webpackConfig = {
         new webpack.BannerPlugin('买菜的家朋版权所有'),
     ],
     devServer: {
+        contentBase:path.resolve(__dirname,'dist'),
         port: '8181',
         proxy : [{
             context: ['/admin'],
@@ -114,5 +115,4 @@ var webpackConfig = {
         }]
     }
 }
-
 module.exports = webpackConfig;

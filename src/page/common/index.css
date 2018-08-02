@@ -2,7 +2,7 @@
 * { margin: 0; padding: 0 }
 body { font: 1.5rem "Microsoft YaHei", Arial, Helvetica, sans-serif; color: #555; background: #efefef; line-height: 1.5; }
 img { border: 0; display: block }
-ul, li { list-style: none; }
+ul{ list-style: none; }
 a { text-decoration: none; color: #555 }
 h1,h2,h3,h4,h5,h6{margin: 0;padding: 0;}
 a:hover { text-decoration: none; color: #000; }

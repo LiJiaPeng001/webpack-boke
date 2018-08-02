@@ -4,8 +4,9 @@
   "description": "李家朋个人博客",
   "main": "index.js",
   "scripts": {
+    "build" : "webpack -p",
     "dist": "set WEBPACK_ENV=online && webpack -p",
-    "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --open"
+    "dev": "set WEBPACK_ENV=env && webpack-dev-server --inline --open"
   },
   "author": "peng",
   "license": "ISC",

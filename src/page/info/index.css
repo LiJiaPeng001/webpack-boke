@@ -25,6 +25,11 @@
 .guanzhu{ top:10px;width:300px;}
 .newsview .r_li{
     background: #efefef;
+    margin: 2px 0;
+}
+.newsview ul{
+    list-style-type: none;
+    margin: 0px;
 }
 #pagination{
     padding: 0 30px;
@@ -32,4 +37,11 @@
 #prevnews a{
     color:#888888;
     font-size: 14px;
+}
+main ul{
+    list-style-type: disc;
+    margin: 0 0 20px 50px;
+}
+main ul li {
+    margin: 8px 0;
 }
