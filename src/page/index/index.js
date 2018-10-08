@@ -12,10 +12,14 @@ let _info               = require('service/info-service.js');
 let templateArticle     = require('./article.string');
 let _mm                 = require('util/mm.js');
 let Pagination          = require('util/pagination/index.js');
+let header              = require('page/common/header/index.js');
 
 var index = {
     init : function(){
         this.bind();
+        header.init({
+            name : '主页'
+        })
     },
     bind : function(){
         this.getQueryArticle();

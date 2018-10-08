@@ -7,22 +7,31 @@ let _mm    = require('util/mm.js');
 let templateHead = require('./head.string');
 
 var header = {
-    //初始化
-    init : function(){
-        this.bind();
+    option : {
+        name : '',
+        navList : []
     },
-    bind : function(){
-        this.getHeaderLabel();
+    //初始化
+    init : function(option){
         this.getIphone();
+        this.getHeaderLabel(option);
     },
     //获取头部所有标签
-    getHeaderLabel : function(){
-        _index.getLabel(function(res){
-            var head = _mm.renderHtml(templateHead,{res:res});
-            $('#starlist').html(head);
-        },function(err){
-            _mm.errorTips(err);
-        })
+    getHeaderLabel : function(option){
+        var _this = this
+            _index.getLabel(function(res){
+                _this.option.navList = res
+                $.extend(_this.option, option);
+                for(var i = 0, iLength = _this.option.navList.length; i < iLength; i++){
+                    if(_this.option.navList[i].label === _this.option.name){
+                        _this.option.navList[i].isActive = true;
+                    }
+                };
+                var head = _mm.renderHtml(templateHead,{res:_this.option});
+                $('#starlist').html(head);
+            },function(err){
+                _mm.errorTips(err);
+            })
     },
     //移动端操作
     getIphone : function(){
@@ -32,4 +41,4 @@ var header = {
     }
 };
 
-module.exports = header.init();
+module.exports = header

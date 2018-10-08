@@ -1,5 +1,11 @@
 <div>
-    {{#res}}
-    <li><a href="{{link}}" target='_blank'>{{label}}</a></li>
-    {{/res}}
+    {{#res.navList}}
+    {{#isActive}}
+<li class='active'><a href="{{link}}" target='_blank'>{{label}}</a></li>
+{{/isActive}}
+{{^isActive}}
+<li><a href="{{link}}" target='_blank'>{{label}}</a></li>
+{{/isActive}}
+    
+    {{/res.navList}}
 </div>
